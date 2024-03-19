@@ -1,4 +1,4 @@
-site_title = "MyArxiv"
+site_title = "Yibo's arxiv"
 limit_days = 365
 cache_url = "https://yiboz2001.github.io/MyArxiv/cache.json"
 
