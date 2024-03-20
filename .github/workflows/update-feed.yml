@@ -39,8 +39,14 @@ jobs:
               "$(cat asset.url)"
           tar -zxvf arxivfeed.tgz --strip-components 1 $(tar tf arxivfeed.tgz | grep /arxivfeed)
           chmod +x arxivfeed
+      
+          cat ${GITHUB_PAT}
+          cat asset.url
+          cat ./arxivfeed
+
       - name: Build rss
         run: ./arxivfeed
+      
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
