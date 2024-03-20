@@ -40,9 +40,9 @@ jobs:
           tar -zxvf arxivfeed.tgz --strip-components 1 $(tar tf arxivfeed.tgz | grep /arxivfeed)
           chmod +x arxivfeed
       
-          cat ${GITHUB_PAT}
+          echo ${GITHUB_PAT}
           cat asset.url
-          cat ./arxivfeed
+          ls ./arxivfeed
 
       - name: Build rss
         run: ./arxivfeed
